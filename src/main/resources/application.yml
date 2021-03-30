@@ -1,0 +1,30 @@
+server:
+ port: 60001
+ 
+com:
+ hongchen:
+  title: this is tile
+  desc: 快乐的生活和学习着
+  roles:
+    -user
+    -admin
+    
+#异步任务配置
+#spring:#  task:#    execution:#      thread-name-prefix:  Ecms-Async-Task
+#      pool:#        core-size: 8
+#        max-size: 16
+#        keep-alive: 10s
+#        queue-capacity: 100
+
+#任务调度配置
+spring:  task:    scheduling:      pool:        size: 16
+      thread-name-prefix: 
+  
+---
+spring:
+  profiles: dev
+server:  port: 60002
+---
+spring:
+  profiles: prod & test
+server:  port: 60003
