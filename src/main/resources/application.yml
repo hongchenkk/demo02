@@ -9,16 +9,31 @@ com:
     -user
     -admin
     
+#添加性能指标监控    
+management:
+  server:
+    port: 30068
+  endpoints:
+    web:
+      exposure:
+        include: prometheus
+#    enabled-by-default: false
+#  endpoint:
+#    metrics:
+#      enabled: true
+#    info:
+#      enabled: true
+    
 #异步任务配置
-#spring:#  task:#    execution:#      thread-name-prefix:  Ecms-Async-Task
+#spring:#  task:#    execution:#      thread-name-prefix:  Ecms-Async-Task-
 #      pool:#        core-size: 8
 #        max-size: 16
 #        keep-alive: 10s
 #        queue-capacity: 100
 
 #任务调度配置
-spring:  task:    scheduling:      pool:        size: 16
-      thread-name-prefix: 
+#spring:#  task:#    scheduling:#      pool:#        size: 16
+#      thread-name-prefix: Ecms-Scheduled-Task-
   
 ---
 spring:

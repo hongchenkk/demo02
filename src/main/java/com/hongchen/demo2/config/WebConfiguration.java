@@ -64,6 +64,9 @@ public class WebConfiguration {
 		//设置核心线程数
 		int cores = Runtime.getRuntime().availableProcessors();
 		taskScheduler.setPoolSize(cores * 3);
+		//等待所有任务结束后再关闭线程池
+		taskScheduler.setWaitForTasksToCompleteOnShutdown(true);
+		//设置线程默认前缀名
 		taskScheduler.setThreadNamePrefix("Becp-Ecms-Scheduler-Task-");
     	return taskScheduler;
     }

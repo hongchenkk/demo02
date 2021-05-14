@@ -68,6 +68,22 @@
 			<scope>runtime</scope>
 		</dependency>
 		
+		<!-- 开启性能指标监控-begin -->
+ 		<dependency>
+		    <groupId>org.springframework.boot</groupId>
+		    <artifactId>spring-boot-starter-actuator</artifactId>
+		</dependency>
+		<dependency>
+		    <groupId>io.micrometer</groupId>
+		    <artifactId>micrometer-registry-prometheus</artifactId>
+		</dependency>
+		<dependency>
+		    <groupId>io.micrometer</groupId>
+		    <artifactId>micrometer-core</artifactId>
+		</dependency>
+		<!-- 开启性能指标监控-end -->
+	
+		
 <!-- 	<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-configuration-processor</artifactId>
